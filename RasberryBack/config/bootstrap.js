@@ -1,7 +1,4 @@
-/*
-
 const request = require('request');
-
 module.exports.bootstrap = async function (done) {
 
   setInterval(
@@ -9,20 +6,15 @@ module.exports.bootstrap = async function (done) {
       console.log('Enviar datos');
 
       const objetoRequest = {
-        url: 'http://localhost:1337/Usuario',
+        url: 'http://localhost:1338/Pulsacion',
         form: {
-          nombre: 'Adrian',
-          apellido: 'Eguez'
+          nombre: 'Lolita',
+          edad: '15'
+         // usuarioIdFK: 'como estas'// USEN EL SUYO
         }
       };
       request
-        .post(objetoRequest,
-          (err, respuesta, body) => {
-            console.log('err', err);
-            console.log('respuesta', respuesta);
-            console.log('body', body);
-
-          })
+        .post(objetoRequest)
     }
     , 10000);
 
